@@ -1,15 +1,12 @@
   # Readme Generator
 
-  
-
   ## Description
 
-  <p>This tool creates a professional README through user prompts</p>
+  <p>This tool creates a profile of team members through user prompts</p>
 
   ## Table of Contents 
   * [Installation](#installation)
   * [Usage](#usage)
-  
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -24,7 +21,7 @@
 
   ## Usage
 
-  <p>This tool can be used to quickly and easily create a README.md file, add this file to any project!</p>
+  <p>This tool can be used to !</p>
    
 
   ## Questions 
