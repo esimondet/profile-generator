@@ -1,8 +1,4 @@
 const promptManager = require('./lib/Generator');
 
-// new Generator() //.initializeGenerator();
-
+//Begin inquirer prompts and build HTML
 promptManager();
-
-// console.log(Generator);
-// console.log(new Generator());

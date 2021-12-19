@@ -1,25 +1,25 @@
-const fs = require('fs');
 const Manager = require('../lib/Manager');
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 
+//function to create Manager card in HTML
 const generateManager = (manager) => {
     return `
     <section class="column">
       <div class="card box">
         <div class="media-content">
-          <h2 class="title is-4">${manager.name}</h2>
-          <p class="substitle is-6"><i class="fas fa-mug-hot"></i>${manager.role}</p>
+          <h2 class="title is-4">${manager.getName()}</h2>
+          <p class="substitle is-6"><i class="fas fa-mug-hot"></i> ${manager.getRole()}</p>
         </div>
         <div class=" box">
           <div class="content">
-            <h4>ID: ${manager.id}</h4>
+            <h4>ID: ${manager.getId()}</h4>
           </div>
           <div class="content">
-            <h4>Email: <a href="mailto:${manager.email}">${manager.email}</a></h4>
+            <h4>Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></h4>
           </div>
           <div class="content">
-            <h4>Office Number: ${manager.office}</h4>
+            <h4>Office Number: ${manager.getOffice()}</h4>
           </div>
         </div>
       </div>
@@ -27,63 +27,74 @@ const generateManager = (manager) => {
     `
 }
 
+//function to create Engineer card in HTML
 const generateEngineers = (engineers) => {
+
+    //starting engineer string
     var engineerHtml = '';
 
     for (let i = 0; i < engineers.length; i++) {
 
+    // for length of engineers, append new entry
     engineerHtml += `
     <section class="column">
       <div class="card box">
         <div class="media-content">
-          <h2 class="title is-4">${engineers[i].name}</h2>
-          <p class="substitle is-6"><i class="fas fa-glasses"></i>${engineers[i].role}</p>
+          <h2 class="title is-4">${engineers[i].getName()}</h2>
+          <p class="substitle is-6"><i class="fas fa-glasses"></i> ${engineers[i].getRole()}</p>
         </div>
         <div class="box">
           <div class="content">
-            <h4>ID: ${engineers[i].id}</h4>
+            <h4>ID: ${engineers[i].getId()}</h4>
           </div>
           <div class="content">
-            <h4>Email: <a href="mailto:${engineers[i].email}">${engineers[i].email}</a></h4>
+            <h4>Email: <a href="mailto:${engineers[i].getEmail()}">${engineers[i].getEmail()}</a></h4>
           </div>
           <div class="content">
-            <h4>Github: <a href="https://www.github.com/${engineers[i].github}" target="_blank">${engineers[i].github}</a></h4>
+            <h4>Github: <a href="https://www.github.com/${engineers[i].getGitHub()}" target="_blank">${engineers[i].getGitHub()}</a></h4>
           </div>
         </div>
       </div>
     </section>
     `
     }
+
+    //return new HTML blocks for each instance of new Engineer
     return engineerHtml;
 }
 
+//function to create Intern card in HTML
 const generateInterns = (interns) => {
+    //starting intern string
     var internHtml = '';
 
     for (let i = 0; i < interns.length; i++) {
 
+    // for length of interns, append new entry
     internHtml += `
     <section class="column">
       <div class="card box">
         <div class="media-content">
-          <h2 class="title is-4">${interns[i].name}</h2>
-          <p class="substitle is-6"><i class="fas fa-graduation-cap"></i>${interns[i].role}</p>
+          <h2 class="title is-4">${interns[i].getName()}</h2>
+          <p class="substitle is-6"><i class="fas fa-graduation-cap"></i> ${interns[i].getRole()}</p>
         </div>
         <div class="box">
           <div class="content">
-            <h4>ID: ${interns[i].id}</h4>
+            <h4>ID: ${interns[i].getId()}</h4>
           </div>
           <div class="content">
-            <h4>Email: <a href="mailto:${interns[i].email}">${interns[i].email}</a></h4>
+            <h4>Email: <a href="mailto:${interns[i].getEmail()}">${interns[i].getEmail()}</a></h4>
           </div>
           <div class="content">
-            <h4>School: ${interns[i].school}</h4>
+            <h4>School: ${interns[i].getSchool()}</h4>
           </div>
         </div>
       </div>
     </section>
     `
     }
+
+    //return new HTML blocks for each instance of new Intern
     return internHtml;
 }
 
